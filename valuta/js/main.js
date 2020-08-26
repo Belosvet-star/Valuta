@@ -3,6 +3,9 @@ $(document).ready(function(){
       loop:true,
       margin:10,
       nav:true,
+      /* navText : ["",""], */
+      navText: ["<img src='img/arrow-left.svg'>", "<img src='img/arrow-right.svg'>"],
+      dots: false,
       responsive:{
          0:{
                items:1

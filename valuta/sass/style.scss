@@ -11,7 +11,7 @@ body  {
 .container {
 	max-width: 1200px;
 	width: 90%;
-  margin: 0 auto;
+   margin: 0 auto;
 }   
 
 .button{
@@ -320,10 +320,10 @@ body  {
 }
 
 .service {
-	max-width: 800px;
+	
 	position: absolute;
 	top: -237px;
-	left: 47%;
+	left: 50%;
 	transform: translateX(-50%);
 	&:after{
 		content: '';
@@ -525,4 +525,7 @@ body  {
 		color: #838BA8;
 	}
 }
+
+
+
 @import "_media.scss";
