@@ -3,31 +3,34 @@ body  {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-   font-family: 'Rubik', sans-serif;
-	background-color: #dfcc29;
+  font-family: 'Rubik', sans-serif;
+
 
 	
 }
 .container {
 	max-width: 1200px;
-   margin: 0 auto;
+	width: 90%;
+  margin: 0 auto;
 }   
 
 .button{
-   border-radius: 9px;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 19px;
-   color: #4E5983;
+	border-radius: 9px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #4E5983;
 	padding: 18px 14px;
 	text-decoration: none;
-   &:hover {
-      background-color: rgba(161, 127, 255,0.11);
-		cursor: pointer;
-		color: #562EC2;
-   }
-   &__entry {
-   	margin-right: 17px;
+	&:hover {
+		background-color: rgba(161, 127, 255,0.11);
+		text-decoration: none;
+	cursor: pointer;
+	color: #562EC2;
+	}
+	&__entry {
+	margin-right: 17px;
+	text-decoration: none;
 
 	}
 	&__exchange {
@@ -134,22 +137,22 @@ body  {
 		justify-content: space-between;
 		align-items: center;
 		
-		width: 80%;
-    	margin: 0 auto;
+		width: 90%;
+    margin: 0 auto;
 		background: rgba(255, 255, 255,0.8);
 		border: 4px solid #F7F8FD;
 		border-radius: 26px;
 		padding: 100px 85px;
-		&:before {
+		/* &:before {
 			content: '';
 			background: url(../img/pseudo-bg.png) no-repeat;
 			width: 200px;
 			height: 100%;
 			display: block;
 			top: 346px;
-    		right: 76%;
+    	right: 76%;
 			position: absolute;
-		}
+		} */
 		&_title {
 			font-weight: 700;
 			font-size: 18px;
@@ -273,8 +276,7 @@ body  {
 	}
 }       
 
-      
-   
+
 .reserve {
 	background: linear-gradient(180deg, #EFF2FA 0%, rgba(255, 255, 255, 0) 96.57%);
 	opacity: 0.8;
@@ -294,7 +296,7 @@ body  {
 		flex-wrap: wrap;
 	}
 	&__block {
-		flex-basis: 17%;
+		flex-basis: 25%;
 		display: flex;
 		align-items: center;
 		padding: 40px 20px;
@@ -501,6 +503,9 @@ body  {
 			text-decoration: none;
 			margin: 0 20px;
 			cursor: pointer;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 	&__social {
@@ -520,3 +525,4 @@ body  {
 		color: #838BA8;
 	}
 }
+@import "_media.scss";
