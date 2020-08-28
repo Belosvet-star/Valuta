@@ -262,8 +262,9 @@ body  {
 		align-items: flex-start;
 	}
 	&__block {
-		flex-basis: 27%;
+		flex-basis: 33%;
 		align-items: start;
+		padding: 0 20px;
 	}
 	&__title {
 		font-weight: 500;
@@ -307,7 +308,7 @@ body  {
 		flex-wrap: wrap;
 	}
 	&__block {
-		flex-basis: 25%;
+		flex-basis: 20%;
 		display: flex;
 		align-items: center;
 		padding: 40px 20px;
