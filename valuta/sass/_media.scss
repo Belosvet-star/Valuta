@@ -11,7 +11,6 @@
 		margin: 56px 0 0 0;
 	}
 }
-
 @media (max-width: 1024px) {
 	.mainscreen__currency {
 		flex-wrap: wrap;
@@ -27,7 +26,7 @@
 		flex-basis: 100%;
 		display: flex;
 		justify-content: center;
-	}
+}
 	.mainscreen__wrap {
 		flex-basis: 37%;
 	}
@@ -40,61 +39,67 @@
 	}
 	.mainscreen__subtitle {
 		font-size: 16px;
-    	line-height: 12px;
+		line-height: 12px;
 	}
 	.mainscreen__currency_arrow {
-		flex-basis: 0;
+			flex-basis: 0;
 	}
 }
-
-
 @media (max-width: 984px) {
-/* 	.mainscreen__currency {
-			flex-wrap: nowrap;
-		} */
-
 	.header__nav {
 		flex-wrap: wrap;
 	}
+	.header__logo {
+		margin: 0;
+	}
 	.header__menu_link {
 		margin-right: 37px;
-  }
+	}
 	.header__menu {
 		margin-left: 30px;
 		margin-right: 14px;
 	}
 	.header__logo {
-		margin-bottom: 24px;
+		margin-bottom: 0;
 	}
-	
 	.header__buttons {
 		margin-top: 10px;
 		display: flex;
 		flex-basis: 100%;
 		justify-content: flex-end;
-
+	}
 	.mainscreen__currency {
-	/* 	flex-direction: column;
-		align-items: flex-start; */
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 	.mainscreen__currency_arrow {
-		margin: 35px 0;
+		
 		flex-basis: 0;
+	}
 	.mainscreen__wrap {
 		flex-basis: 37%;
 		display: block;
 	}
 }
-@media (max-width: 715px) {
+@media (max-width: 828px) {
+	.mainscreen__currency_arrow {
+		margin: 35px 0;
+		flex-basis: 100%;
+	}
+	.mainscreen__currency_arrow-center {
+		margin: 0;
+		
+	}
+}
+@media (max-width: 768px) {
 	.header__nav {
 		display: flex;
-
 		flex-direction: column;
-
 	}
 	.header__menu {
 		flex-basis: 100%;
+	}
+	.header__logo {
+		margin-bottom: 25px;
 	}
 	.mainscreen {
 		padding: 65px 0;
@@ -115,9 +120,8 @@
 	}
 	.button__exchange {
 		margin-top: 31px;
-   }
+	}
 }
-
 @media (max-width: 600px) {
 	.mainscreen__title {
 		font-size: 36px;
@@ -131,8 +135,7 @@
 	}
 	.mainscreen__currency_sum {
 		margin-right: 3.5em;
-   }
-}
+	}
 }
 @media (max-width: 400px)  {
 	.container {
@@ -140,12 +143,12 @@
 		width: 90%;
 		margin: 0 auto;
 		padding: 0 10px;
+	}
 	.header__logo {
 		display: block;
 		width: 173px;
 		height: 100%;
-  }
-  
+	}
 	.header__menu {
 		flex-direction: column;
 		display: flex;
@@ -163,11 +166,10 @@
 	}
 	.button__entry {
 		margin-right: 0;
-
-  	}
+	}
 	.mainscreen__currency {
 		padding-left: 34px;
-	  }
+	}
 	.mainscreen__currency_sum {
 		margin-right: 1.5em;
 		font-size: 18px;
@@ -178,5 +180,5 @@
 	}
 	.mainscreen__currency_button {
 		justify-content: flex-start;
-  }
-}}}
+	}
+}
