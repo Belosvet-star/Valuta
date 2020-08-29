@@ -278,13 +278,13 @@ body  {
 		line-height: 166.5%;
 		color: rgba(78, 89, 131, 0.7);
 	}
+	&__image {
+		width: 166px;
+		height: 118px;
+		margin-bottom: 30px;
+	}
 	&__img {
-		width: 179px;
-		height: 179px;
-		display: block;
-		margin: 0 auto;
-		object-fit: cover;
-		margin-bottom: 13px;
+		width: 100%;
 	}
 }       
 
@@ -308,13 +308,14 @@ body  {
 		flex-wrap: wrap;
 	}
 	&__block {
-		flex-basis: 20%;
+		flex-basis: 270px;
+		height: 96px;
 		display: flex;
 		align-items: center;
-		padding: 40px 20px;
+		
 	}
 	&__icon {
-		margin-right: 25px;
+		margin-right: 20px;
 	}
 	&__descr {
 		font-weight: normal;
