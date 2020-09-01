@@ -10,7 +10,10 @@
 	.button__exchange {
 		margin: 56px 0 0 0;
 	}
+	
 }
+
+
 @media (max-width: 1024px) {
 	.mainscreen__currency {
 		flex-wrap: wrap;
@@ -45,6 +48,10 @@
 			flex-basis: 0;
 	}
 
+	.end__title {
+    font-size: 28px;
+		line-height: 40px;
+	}
 }
 @media (max-width: 984px) {
 	.header__nav {
@@ -96,6 +103,7 @@
 	.reserve__count {
 		font-size: 17px;
 	}
+	
 }
 @media (max-width: 842px) {
 	.mainscreen__currency_arrow {
@@ -157,6 +165,10 @@
 	.features__block {
 		display: flex;
 		flex-basis: 100%;
+		text-align: center;
+	}
+	.features__image {
+		margin: 0 auto;
 
 	}
 	
@@ -164,8 +176,35 @@
 		flex-basis: 65%;
 	}
 	.reserve__title {
-		font-size: 21px;
+		font-size: 30px;
 	}
+	.service__image {
+		display: none;
+	}
+	.service__text {
+    width: 100%;
+	}
+	.review__title {
+		font-size: 30px;
+		margin-bottom: 0;
+	}
+	.reserve {
+		padding: 100px 0 0px 0;
+	}
+	.end__title {
+    font-size: 22px;
+		line-height: 32px;
+	}
+	.end__image {
+		display: none;
+	}
+	.end__block {
+		flex-basis: 90%;
+		margin: auto;
+		padding: 50px 0;
+		text-align: center;
+	}
+
 }
 @media (max-width: 600px) {
 	.mainscreen__title {
@@ -177,6 +216,16 @@
 	}
 	.reserve {
 		padding: 80px 0 80px 0;
+	}
+	.review__block:after {
+		display: none;
+	}
+	.end__image {
+		display: none;
+	}
+	.end__block {
+
+		margin: auto;
 	}
 }
 @media (max-width: 486px) {
@@ -235,5 +284,7 @@
 	.features__block {
 		flex-direction: column;
 	}
-	
+	.end__box {
+		box-shadow: none;
+	}
 }
