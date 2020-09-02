@@ -7,15 +7,18 @@ $(document).ready(function(){
       navText: ["<img src='img/arrow-left.svg'>", "<img src='img/arrow-right.svg'>"],
       dots: false,
       responsive:{
-         0:{
+         320:{
             items:1
          },
-         600:{
-            items:1
-         },
-         1420:{
+         842:{
+            items:2
+         }, 
+         1024:{
             items:2
          }
+
       }
    });
  });
+
+ new WOW().init();

@@ -51,6 +51,13 @@
 	.end__title {
     font-size: 28px;
 		line-height: 40px;
+	} 
+
+	.footer__menu_link {
+		margin: 0 5px;
+	}
+	.footer__social_link {
+		margin-right: 18px;
 	}
 }
 @media (max-width: 984px) {
@@ -129,6 +136,20 @@
 	}
 	.reserve__block {
 		width: 700px;
+	} 
+	.footer {
+		padding: 50px 0;
+	}
+	.footer__menu {
+		margin: 10px 0;
+	}
+	.footer__block {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer__descr {
+		margin: 0;
+		text-align: center;
 	}
 }
 @media (max-width: 768px) {
@@ -227,6 +248,10 @@
 
 		margin: auto;
 	}
+	.service__title {
+		font-size: 32px;
+		line-height: 42px;
+	}
 }
 @media (max-width: 486px) {
 	.mainscreen__title {
@@ -236,6 +261,42 @@
 	.mainscreen__currency_sum {
 		margin-right: 3.5em;
 	}
+	.footer__menu_link {
+		display: inline-block;
+		width: 45%;
+  }
+	.features__text {
+		font-size: 14px;
+		line-height: 139%;
+	}
+	.features__title {
+		font-size: 17px;
+  }
+	.service__title {
+		font-size: 26px;
+		line-height: 36px;
+		text-align: center;
+	}
+	
+	.service__descr {
+
+		font-size: 15px;
+		line-height: 24px;
+		text-align: center;
+	}
+	.reserve__wrap {
+		justify-content: center;
+	}
+	.review__title {
+		font-size: 24px;
+
+	}
+	.review__subcribe {
+		font-size: 13px;
+	}
+	.review__data{
+		font-size: 11px;
+	} 
 }
 @media (max-width: 400px)  {
 	.container {
@@ -248,6 +309,7 @@
 		display: block;
 		width: 173px;
 		height: 100%;
+		
 	}
 	.header__menu {
 		flex-direction: column;
@@ -286,5 +348,16 @@
 	}
 	.end__box {
 		box-shadow: none;
+	}
+	.footer__logo {
+		margin-bottom: 0;
+	}
+	.service__title {
+		font-size: 24px;
+		line-height: 34px;
+  }
+  .service__descr {
+		font-size: 15px;
+		line-height: 22px;
 	}
 }

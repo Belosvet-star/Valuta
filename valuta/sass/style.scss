@@ -23,16 +23,19 @@ body  {
 	color: #4E5983;
 	padding: 18px 14px;
 	text-decoration: none;
+	
 	&:hover {
 		background-color: rgba(161, 127, 255,0.11);
 		text-decoration: none;
-	cursor: pointer;
-	color: #562EC2;
+		cursor: pointer;
+		color: #562EC2;
 	}
+	
 	&__entry {
 	margin-right: 17px;
 	text-decoration: none;
-
+border:  2px solid transparent;
+	box-sizing: border-box;
 	}
 	&__exchange {
 		background: linear-gradient(140.59deg, #562EC2 29.59%, #A07EFE 73.59%);
@@ -49,9 +52,17 @@ body  {
 		cursor: pointer;
 		display: inline-block;
 		margin: 85px 0 0 0;
+		
 		&:hover {
 			background:#562EC2;
 			color: #FFFFFF;
+			
+		}
+		&:active {
+			background:#562EC2;
+			color: rgba(255, 255, 255,0.8);
+			box-shadow: none;
+			
 		}
 	}
 	&__end {
@@ -63,17 +74,32 @@ body  {
 		font-size: 14px;
 		line-height: 17px;
 		text-align: center;
-		color: #9F7DFD;
+		color: #653cd4;
 		padding: 19px 26px;
 		text-decoration: none;
 		cursor: pointer;
 		display: inline-block;
 		margin-top: 49px;
+		transition: 0.5s all;
+		
 		&:hover {
-			background:#653cd4;
+			background:#562EC2;
 			color: #FFFFFF;
+			transition: 0.5s all;
+		}
+		&:active {
+			background:#562EC2;
+			color: rgba(255, 255, 255, 0.8);
+			box-shadow: none;
+			
+		}
+		&:focus {
+			background:#562EC2;
+			color: rgba(255, 255, 255, 0.8);
+			box-shadow: 1px 0px 9px rgba(225, 225, 225, 0.8);
 		}
 	}
+
 }
 .header {
    
@@ -94,12 +120,36 @@ body  {
       line-height: 19px;
       color: #4E5983;
       text-decoration: none;
-      margin-right: 48px;
+		margin-right: 48px;
+		display: inline-block;
+		cursor: pointer;
+    	position: relative;
 			&:last-child{
 				margin-right: 0;
 			}
 			&:hover {
 				color: #562EC2;
+				&:after {
+					width: 100%;
+				}
+			}
+			&:focus {
+				color: #562EC2;
+				&:after {
+					width: 100%;
+				}
+			}
+			&:after {
+				display: block;
+				content: "";
+				background-color: #562EC2;
+				height: 3px;
+				width: 0%;
+				left: 50%;
+				position: absolute;
+				transition: width .2s ease-in-out;
+				transform: translateX(-50%);
+				
 			}
 		}
    }
@@ -214,6 +264,7 @@ body  {
 			font-size: 16px;
 			line-height: 19px;
 			color: #4E5983;
+			
 		}
 		&_sum {
 		font-weight: normal;
@@ -286,6 +337,12 @@ body  {
 		margin-right: 30px;
 	
 	}
+	&__img {
+		transition: all 1s ease-out;
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
 	
 }       
 
@@ -317,6 +374,11 @@ body  {
 	}
 	&__icon {
 		margin-right: 20px;
+		transition: all 0.3s ease-out;
+		&:hover{
+			transform: scale(1.1);
+		}
+		
 	}
 	&__descr {
 		font-weight: normal;
