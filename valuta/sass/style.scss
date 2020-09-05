@@ -23,12 +23,20 @@ body  {
 	color: #4E5983;
 	padding: 18px 14px;
 	text-decoration: none;
-	
+	border: none;
+	outline: none;
 	&:hover {
 		background-color: rgba(161, 127, 255,0.11);
 		text-decoration: none;
 		cursor: pointer;
 		color: #562EC2;
+	}
+	&:active {
+		background-color: rgba(141, 104, 243, 0.932);
+		text-decoration: none;
+		cursor: pointer;
+		color: #ffffff;
+		
 	}
 	
 	&__entry {
@@ -607,6 +615,94 @@ border:  2px solid transparent;
 	}
 }
 
+.popup-with-form{
+	color: #000;
+}
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 20px;
+	width: auto;
+	max-width: 500px;
+	margin: 20px auto;
+}
+.mfp-close-btn-in .mfp-close {
+	color: #333;
+}
 
+.inputbox {
+
+	padding: 5px 5px 12px 5px;
+	font-size: 25px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	width:285px;
+	font-size: 19px;
+}
+
+.labelbox {
+	position: relative;
+	top: 9px;
+	width: 175px;
+	float: left;
+}
+
+#wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.form-element {
+	margin-bottom: 10px;
+	font-size: 19px;
+	&_button{
+		
+	}
+}
+
+#submitButton1, #submitButton2 {
+	font-size: 19px;
+	background-color: #4E5983;
+
+	box-shadow: 0px 7px 20px rgba(160, 126, 254, 1);
+	border-radius: 9px;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	line-height: 22px;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 13px 31px;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	margin-top: 22px;
+	&:hover {
+		background-color: rgba(161, 127, 255,0.5);
+		text-decoration: none;
+		cursor: pointer;
+		color: #351688;
+	}
+	&:active {
+		background:#4E5983;
+		color: rgba(255, 255, 255, 0.8);
+		box-shadow: none;
+		
+	}
+	
+}
+#errorMessage {
+	color: red;
+	font-size: 90% !important;
+	
+}
+
+#successMessage {
+	color: green;
+	font-size: 90% !important;
+	display:none;
+	margin-bottom:20px;
+}
 
 @import "_media.scss";

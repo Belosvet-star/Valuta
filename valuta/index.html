@@ -10,6 +10,7 @@
    <link rel="stylesheet" href="css/owl.carousel.min.css">
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+   <link rel="stylesheet" href="css/magnific-popup.css">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -23,12 +24,75 @@
                <a href="#" class="header__menu_link">Контакты</a>
             </div>
             <div class="header__buttons">
-               <a class="button button__entry">Вход</a>
-               <a class="button button__registry">Регистрация</a>
+               <a href='#form-login' class="button button__entry popup-with-form">Вход</a>
+               <a href="#form-popup" class="button button__registry popup-with-form">Регистрация</a>
             </div>
          </nav>
       </div>
    </div>
+
+   <div>
+      <form id="form-popup" class="white-popup mfp-hide">
+         <div id="wrapper">
+            <div id="successMessage">You've done it! Congratulations.</div>
+            
+            <div id="errorMessage"></div>
+
+            <h2 class="features__title">Зарегистрируйтесь,пожалуйста</h2>
+            <div class="form-element">
+               <label for="name" class="labelbox">Ваше имя</label>
+               <input id="name" class="inputbox" type="text" placeholder="Введите ваше имя" />
+            </div>
+            <div class="form-element">
+               <label for="email" class="labelbox">Ваш Email</label>
+               <input type="text" name="email" id="email1" class="inputbox" placeholder = "eg. yourname@gmail.com">
+            </div>
+            <div class="form-element">
+               <label for="phone" class="labelbox">Телефон</label>
+               <input type="text" name="phone" id="phone" class="inputbox" placeholder = "eg. 0123456789">
+            </div>
+           
+            <div class="form-element">
+               <label for="password" class="labelbox">Пароль</label>
+               <input type="password" name="password" class="inputbox" id="password1">
+            </div>
+           
+            <div class="form-element">
+               <label for="passwordConfirm" class="labelbox">Повтор пароля</label>
+               <input type="password" name="passwordConfirm" class="inputbox" id="passwordConfirm">
+            </div>
+           <div class="form-element">
+               <input type="submit" id="submitButton1" value="Отправить">
+           </div>
+
+         </div>
+      </form>
+      <form id="form-login" class="white-popup mfp-hide">
+         <div id="wrapper">
+            <div id="successMessage">You've done it! Congratulations.</div>
+            
+            <div id="errorMessage"></div>
+            <h2 class="features__title">Введите данные для входа</h2>
+
+            <div class="form-element">
+               <label for="email" class="labelbox">Ваш Email</label>
+               <input type="text" name="email" id="email2" class="inputbox" placeholder = "eg. yourname@gmail.com">
+            </div>
+           
+            <div class="form-element">
+               <label for="password" class="labelbox">Пароль</label>
+               <input type="password" name="password" class="inputbox" id="password2">
+            </div>
+           
+           <div class="form-element">
+               <input type="submit" id="submitButton2" value="Вход">
+           </div>
+
+         </div>
+      </form>
+   </div>
+   
+
    <section class="mainscreen" >
       <div class="mainscreen__decor1"></div>
       <div class="mainscreen__decor2"></div>
@@ -50,12 +114,13 @@
                      <div class="mainscreen__currency_icon">
                         <img src="img/out.svg" alt="back">
                      </div>
+
                      <form class="mainscreen__currency_val">
                         <select name="currency" class="mainscreen__currency_choice">
-                           <option >руб</option>
-                           <option >долл</option>
-                           <option >евро</option>
-                           <option >грн</option>
+                           <option value="rub" >руб</option>
+                           <option value="usd">долл</option>
+                           <option value="euro">евро</option>
+                           <option value="uah">грн</option>
                         </select>
                      </form>
                   </div>
@@ -79,10 +144,10 @@
                      </div>
                      <form class="mainscreen__currency_val">
                         <select name="currency" class="mainscreen__currency_choice">
-                           <option >руб</option>
-                           <option >долл</option>
-                           <option >евро</option>
-                           <option >грн</option>
+                           <option value="rub" >руб</option>
+                           <option value="usd">долл</option>
+                           <option value="euro">евро</option>
+                           <option value="uah">грн</option>
                         </select>
                      </form>
                   </div>
@@ -267,9 +332,12 @@
       </div>
    </footer>
 
+
+
    <script src="js/jquery.min.js"></script>
    <script src="js/owl.carousel.min.js"></script>
    <script src="js/wow.js"></script>
+   <script src="js/jquery.magnific-popup.min.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>
