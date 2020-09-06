@@ -50,10 +50,7 @@ $(document).ready(function(){
                 required: true,
                 email: true
             },
-            phone: {
-                required: true,
-                digits: true
-            },
+
         },
         messages: {
             login: {
@@ -64,10 +61,7 @@ $(document).ready(function(){
                 required: "Поле 'Email' обязательно к заполнению",
                 email: "Необходим формат адреса email" 
             },
-            phone: {
-                required: "Поле 'Phone' обязательно к заполнению",
-                digits: "Необходим цифры" 
-            },
+
         }
     });
     $('#form-login').validate({
@@ -76,20 +70,17 @@ $(document).ready(function(){
                 required: true,
                 email: true
             },
-            phone: {
-                required: true,
-                digits: true
-            },
+
         },
         messages: {
             email: {
                 required: "Поле 'Email' обязательно к заполнению",
                 email: "Необходим формат адреса email" 
             },
-            phone: {
-                required: "Поле 'Phone' обязательно к заполнению",
-                digits: "Необходим цифры" 
-            },
+
         }
     });
 }); 
+jQuery(function($){
+    $("#phone").mask("(999) 999-99-99");
+ });
