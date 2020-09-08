@@ -50,6 +50,16 @@ $(document).ready(function(){
                 required: true,
                 email: true
             },
+            password: { 
+                required: true,
+                minlength: 6,
+                maxlength: 10,
+            },
+            passwordConfirm: { 
+                equalTo: "#password",
+                minlength: 6,
+                maxlength: 10,
+            }
 
         },
         messages: {
@@ -61,26 +71,46 @@ $(document).ready(function(){
                 required: "Поле 'Email' обязательно к заполнению",
                 email: "Необходим формат адреса email" 
             },
+            password: { 
+                required:"Введите пароль",
+                maxlength: "Символов не более 10",
+                minlength: "Введите не менее 6-и символов"
+            },
+            passwordConfirm: {
+                minlength: "Введите не менее 6-и символов",
+                maxlength: "Символов не более 10",
+                equalTo: "Не совпадает! Проверьте правильность набора",
+            },
+        },
 
-        }
     });
     $('#form-login').validate({
         rules: {
             email: {
-                required: true,
                 email: true
             },
 
         },
         messages: {
             email: {
-                required: "Поле 'Email' обязательно к заполнению",
                 email: "Необходим формат адреса email" 
             },
 
         }
     });
 }); 
+
 jQuery(function($){
     $("#phone").mask("(999) 999-99-99");
- });
+});
+
+$(document).ready(function(){
+
+        $('.mobile__menu').click(function() {
+            console.log ('клик по кнопке');
+            $(".mobile__menu").toggleClass("activity");
+            $('.header__nav').addClass('nav-open').slideToggle('300');
+        });
+
+
+});

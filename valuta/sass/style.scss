@@ -3,7 +3,7 @@ body  {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-   font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
 
 
 	
@@ -663,7 +663,7 @@ body  {
 	justify-content: center;
 	align-items: center;
 	border-radius: 12px;
-	box-shadow: 2px 2px 6px grey;
+	box-shadow: 2px 2px 6px #583ca3;
 }
 .wrapper {
 	display: block;
@@ -679,9 +679,8 @@ body  {
 
 #submitButton1, #submitButton2 {
 	font-size: 19px;
-	background-color: #4E5983;
-
-	box-shadow: 0px 7px 20px rgba(160, 126, 254, 1);
+	background-color: #562EC2;
+	box-shadow: 1px 2px 9px #a07efe;
 	border-radius: 9px;
 	font-weight: bold;
 	border: none;
@@ -696,13 +695,13 @@ body  {
 	margin: 0 auto;
 	margin-top: 22px;
 	&:hover {
-		background-color: rgba(161, 127, 255,0.5);
+		background-color: #A07EFE;
 		text-decoration: none;
 		cursor: pointer;
 		color: #351688;
 	}
 	&:active {
-		background:#4E5983;
+		background:rgba(141, 104, 243, 0.932);
 		color: rgba(255, 255, 255, 0.8);
 		box-shadow: none;
 		
@@ -713,10 +712,37 @@ body  {
 
 .error{
 	color: red; 
+	font-size: 14px;
 }
 input.error {
- border: 1px solid #ff0000;
+	border: 1px solid #ff0000;
 }
 
+.mobile {
+	display: none;
+	&__menu {
+    text-decoration: none;
+    padding: 17px;
+		font-size: 24px;
+		display: none;
+		&_container {
+			padding: 10px 0 0 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
+.activity {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+.flex {
+	display: flex;
+}
+.nav-open{ 
+	height: auto; 
+}
 
 @import "_media.scss";
