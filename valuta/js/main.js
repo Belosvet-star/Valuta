@@ -105,18 +105,13 @@ jQuery(function($){
 });
 
 $(document).ready(function(){
-
         $('.mobile__menu').click(function() {
             console.log ('клик по кнопке');
             $(".mobile__menu").toggleClass("activity");
-            $('.header__nav').addClass('nav-open').slideToggle('300', function() {
-                if ($(this).css('display') === 'none'){
-                    $(this).removeAttr('style');
-                }
-            });
+            $('.header__menu').toggleClass("activity");
+            $('.header__buttons').toggleClass("activity");
         });
 });
-
 
 // function resize() {
 //     var menu = $('.header__menu');

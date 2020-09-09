@@ -119,15 +119,19 @@ body  {
 		align-items: center;
 		justify-content: space-between;
 		padding: 35px 0;
+
 	}
 	&__logo {
 		display: block;
 		width: 226px;
 		height: 24px;
-		flex-basis: 29%;
+		&_wrap {
+			text-decoration: none;
+			cursor: pointer;
+		}
 	}
 	&__menu {
-		flex-basis: 60%;
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		&_link {
@@ -727,12 +731,60 @@ input.error {
 }
 
 
+.mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .mobile__menu {
+	position: absolute;
+	top: 0;right: 0;
+	padding: 10px;
 	text-decoration: none;
 	font-size: 30px;
-	cursor: pointer;
-	padding: 10px;
+	display: none;
 }
+.activity {
+	display: flex;
+}
+
+.header__menu.activity {
+	display: flex;
+}
+.header__buttons.activity {
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .mobile__menu {
+// 	text-decoration: none;
+// 	font-size: 30px;
+// 	cursor: pointer;
+// 	padding: 10px;
+// }
 
 
 .header__fix {
