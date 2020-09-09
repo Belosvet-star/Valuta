@@ -16,6 +16,7 @@ body  {
 }   
 
 .button{
+	box-sizing: border-box;
 	border-radius: 9px;
 	font-weight: 400;
 	font-size: 16px;
@@ -109,57 +110,64 @@ body  {
 
 }
 .header {
-   
-   &__nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 35px 0;
-   }
-   &__logo {
-      display: block;
-      width: 226px;
-      height: 24px;
-   }
-   &__menu {
-      &_link {
-      font-size: 16px;
-      line-height: 19px;
-      color: #4E5983;
-      text-decoration: none;
+	&__wrap {
+		display: flex;
+		align-items: center;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 35px 0;
+	}
+	&__logo {
+		display: block;
+		width: 226px;
+		height: 24px;
+		flex-basis: 29%;
+	}
+	&__menu {
+		flex-basis: 60%;
+		justify-content: space-between;
+		align-items: center;
+		&_link {
+		font-size: 16px;
+		line-height: 19px;
+		color: #4E5983;
+		text-decoration: none;
 		margin-right: 48px;
 		display: inline-block;
 		cursor: pointer;
-    	position: relative;
-			&:last-child{
-				margin-right: 0;
-			}
-			&:hover {
-				color: #562EC2;
-				&:after {
-					width: 100%;
-				}
-			}
-			&:focus {
-				color: #562EC2;
-				&:after {
-					width: 100%;
-				}
-			}
+		position: relative;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover {
+			color: #562EC2;
 			&:after {
-				display: block;
-				content: "";
-				background-color: #562EC2;
-				height: 3px;
-				width: 0%;
-				left: 50%;
-				position: absolute;
-				transition: width .2s ease-in-out;
-				transform: translateX(-50%);
-				
+				width: 100%;
 			}
 		}
-   }
+		&:focus {
+			color: #562EC2;
+			&:after {
+				width: 100%;
+			}
+		}
+		&:after {
+			display: block;
+			content: "";
+			background-color: #562EC2;
+			height: 3px;
+			width: 0%;
+			left: 50%;
+			position: absolute;
+			transition: width .2s ease-in-out;
+			transform: translateX(-50%);
+			
+		}
+		}
+}
 }
 .mainscreen {
 	padding: 113px 0 ;
@@ -583,7 +591,7 @@ body  {
 		margin-bottom: 19px;
 	}
 	&__menu {
-		&_link {
+		&_item {
 			font-weight: normal;
 			font-size: 14px;
 			line-height: 17px;
@@ -597,7 +605,7 @@ body  {
 		}
 	}
 	&__social {
-		&_link {
+		&_item {
 			margin-right:30px;
 			cursor: pointer;
 			&:last-child {
@@ -718,31 +726,74 @@ input.error {
 	border: 1px solid #ff0000;
 }
 
-.mobile {
-	display: none;
-	&__menu {
-    text-decoration: none;
-    padding: 17px;
-		font-size: 24px;
-		display: none;
-		&_container {
-			padding: 10px 0 0 0;
-			display: flex;
-			justify-content: flex-end;
-		}
-	}
+
+.mobile__menu {
+	text-decoration: none;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 10px;
 }
-.activity {
-	display: block;
-}
-.hidden {
-	display: none;
-}
-.flex {
+
+
+.header__fix {
+
+  padding: 8px 0;
+  position: relative;
+  left: 0;
+  width: 100%; }
+.header__headerInner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-}
-.nav-open{ 
-	height: auto; 
-}
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #ffffff; }
+
+.header__headerInner {
+	padding-left: 0px; }
+.header__menu_part {
+	margin: 0 19px;
+	width: auto;
+	letter-spacing: .5px; }
+.header__hamburger {
+	display: none;
+	width: 30px;
+	height: 30px; }
+.header__hamburger svg {
+	width: 30px;
+	height: 30px;
+	fill: #ffffff; }
+
+.header__fix.mobile .header__headerInner {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap; }
+.header__fix.mobile .header__logo {
+	-webkit-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0; }
+.header__fix.mobile .header__menu{
+	flex-direction: row;
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	width: 100%; }
+.header__fix.mobile .header__menu_part, .header__headerInner {
+	text-align: center; }
+.header__fix.mobile .header__hamburger {
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	display: block; }
 
 @import "_media.scss";

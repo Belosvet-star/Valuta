@@ -75,15 +75,12 @@
 	.header__menu_link {
 		margin-right: 37px;
 	}
-	.header__menu {
-		margin-left: 30px;
-		margin-right: 14px;
-	}
+	
 	.header__logo {
 		margin-bottom: 0;
 	}
 	.header__buttons {
-		margin-top: 10px;
+
 		display: flex;
 		flex-basis: 100%;
 		justify-content: flex-end;
@@ -123,6 +120,13 @@
 		text-align: center;
 	}
 	
+	
+}
+@media (max-width: 888px) {
+	.header__nav {
+		flex-direction: column;
+		padding: 21px 0;
+	}
 	
 }
 @media (max-width: 842px) {

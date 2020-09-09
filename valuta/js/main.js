@@ -109,8 +109,45 @@ $(document).ready(function(){
         $('.mobile__menu').click(function() {
             console.log ('клик по кнопке');
             $(".mobile__menu").toggleClass("activity");
-            $('.header__nav').addClass('nav-open').slideToggle('300');
+            $('.header__nav').addClass('nav-open').slideToggle('300', function() {
+                if ($(this).css('display') === 'none'){
+                    $(this).removeAttr('style');
+                }
+            });
         });
-
-
 });
+
+
+// function resize() {
+//     var menu = $('.header__menu');
+//     var header = $('.header__fix');
+//     var widthHead = header.width();
+//         if (widthHead < 600) {
+//             menu.css({'display':'none'});
+//             header.addClass('mobile');
+//         } else {
+//             menu.css({'display':'flex'});
+//             header.removeClass('mobile');
+//     }
+// }
+// resize();
+
+// $(window).resize(function() {
+//     resize();
+// });
+
+// $('.header__hamburger').click(function(){
+//     element = $('.header__menu');
+//     display = element.css('display');
+//     if(display == 'none')
+//         $('.header__menu').slideDown(400);
+//     if(display == 'block')
+//         $('.header__menu').slideUp(400);
+// });
+
+// $('.header__menu_link').click(function(){
+//     var header = $('.header__fix');
+//     var widthHead = header.width();
+//     if(widthHead < 600)
+//         $('.header__menu').slideUp(400);
+// });
