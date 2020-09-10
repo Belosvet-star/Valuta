@@ -113,6 +113,27 @@ $(document).ready(function(){
         });
 });
 
+$(document).ready(function() {
+    /* отключаем стандартное поведение браузера, чтоб не перезагружался */
+	$('form').submit(function(e) {
+		e.preventDefault();
+		 /* отправка данных на сервер */
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#form-popup, #form-login').fadeOut();
+			$('.overlay, #form-thanks').fadeIn('slow');
+
+			$('form').trigger('reset');
+		});
+			return false;
+	});
+});
+	
+
 // function resize() {
 //     var menu = $('.header__menu');
 //     var header = $('.header__fix');
