@@ -113,26 +113,44 @@ $(document).ready(function(){
         });
 });
 
-$(document).ready(function() {
-    /* отключаем стандартное поведение браузера, чтоб не перезагружался */
-	$('form').submit(function(e) {
-		e.preventDefault();
-		 /* отправка данных на сервер */
-		$.ajax({
-			type: "POST",
-			url: "mailer/smart.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$(this).find("input").val("");
-			$('#form-popup, #form-login').fadeOut();
-			$('.overlay, #form-thanks').fadeIn('slow');
-
-			$('form').trigger('reset');
-		});
-			return false;
-	});
+// Это отправка модальных и получение спасибо с помощью плагина magnific popup
+$(document).ready(function () {
+    $(".form").submit(function () {
+        // Получение ID формы
+        var formID = $(this).attr('id');
+        // Добавление решётки к имени ID
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'mailer/smart.php',
+            data: formNm.serialize(),
+            success: function (data) {
+            
+                //$(formNm).html(data);
+                
+                setTimeout(function() {
+                    }, 3000);
+                    $.magnificPopup.open({
+                    items: {
+                    src: '#form-thanks',
+                    removalDelay: 200
+                    }
+            });
+    
+    },
+    error: function (jqXHR, text, error) {
+        // Вывод текста ошибки отправки
+        $(formNm).html(error);
+        }
+    });
+    return false;
+    });
 });
+
+
 	
+
+
 
 // function resize() {
 //     var menu = $('.header__menu');
